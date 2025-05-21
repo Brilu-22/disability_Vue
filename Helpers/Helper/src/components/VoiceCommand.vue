@@ -1,7 +1,7 @@
 <template>
   <div>
     <button @click="startListening" class="voice-btn"> <!-- Fixed: Added @click handler -->
-      🎤 {{ isListening ? "Listening..." : "Start Voice Control" }} <!-- Fixed: Added space & fixed typo -->
+      🎤 {{ isListening ? "Listening..." : "I'm Listening..." }} 
     </button>
     <p v-if="spokenText">You said: "{{ spokenText }}"</p>
     <div v-if="error" class="error">{{ error }}</div>
@@ -63,14 +63,27 @@ const executeCommand = (command) => {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Quicksand:wght@300..700&display=swap');
+
 .voice-btn {
   padding: 12px 24px;
   font-size: 16px;
   cursor: pointer;
-  background: #42b983;
-  color: white;
-  border: none;
+  color: #181818;
+  border: 1px solid #181818;
   border-radius: 4px;
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  background-color: white;
+  color: #181818;
+  border: 1px solid #181818;
+}
+
+.voice-btn:hover{
+  background-color: #181818;
+  color: white;
 }
 .error {
   color: red;
