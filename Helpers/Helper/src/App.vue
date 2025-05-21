@@ -2,7 +2,7 @@
   <div class="app-container">
     <h1>School Management System (Accessibility Mode)</h1>
     
-    <!-- Voice Control Component -->
+    <!--Voice Control Component -->
     <VoiceControl @command-executed="handleVoiceCommand" />
     
     <!-- Video Player with Closed Captions -->
